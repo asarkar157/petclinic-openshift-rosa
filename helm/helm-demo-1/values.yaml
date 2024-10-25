@@ -6,7 +6,7 @@ helm_hpa_c3eec42e2a68545c94bf589984724381:
     target_cpu_utilization_percentage: 50
     target_memory_utilization_percentage: 50
     workload_kind: Deployment
-    workload_name: ""
+    workload_name: petclinic
 helm_ingress_b8ccb1ce12845cbf8bfc3c844fb776c3:
     annotations:
         kubernetes.io/ingress.allow-http: "false"
@@ -35,14 +35,14 @@ helm_workload_a0fe97fd4d0155e781d867d1dff417c1:
     env: {}
     env_from_config: []
     env_from_secret: []
-    image: ""
+    image: ghcr.io/stackgen-demo/spring-petclinic
     image_pull_policy: Always
     image_pull_secret: null
-    image_tag: ""
+    image_tag: main
     kind: Deployment
     labels:
         service: myapp
-    name: ""
+    name: petclinic
     port: 80
     protocol: TCP
     replicas: 1
