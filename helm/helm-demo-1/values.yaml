@@ -37,7 +37,7 @@ helm_workload_a0fe97fd4d0155e781d867d1dff417c1:
     env_from_secret: []
     image: ghcr.io/stackgen-demo/spring-petclinic
     image_pull_policy: Always
-    image_pull_secret: null
+    image_pull_secret: ghcr-secret
     image_tag: main
     kind: Deployment
     labels:
