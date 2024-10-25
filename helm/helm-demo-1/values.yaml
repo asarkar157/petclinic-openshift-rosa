@@ -10,8 +10,8 @@ helm_hpa_c3eec42e2a68545c94bf589984724381:
 helm_ingress_b8ccb1ce12845cbf8bfc3c844fb776c3:
     annotations:
         kubernetes.io/ingress.allow-http: "false"
-    class_name: ""
-    default_backend_name: ""
+    class_name: petclinic-ingress
+    default_backend_name: petclinic-svc
     default_backend_port: 80
     labels:
         service: myapp
@@ -22,15 +22,15 @@ helm_service_account_c220651b88d857ff9188a1a66b8dd165:
     annotations: {}
     automount: false
     labels: {}
-    name: ""
+    name: petclinic
 helm_service_fc2b757e88c7553c9e7f950982296f55:
-    name: ""
+    name: petclinic-svc
     port: 80
     protocol: TCP
     selector_labels:
         service: myapp
     target_port: 80
-    type: ClusterIP
+    type: LoadBalancer
 helm_workload_a0fe97fd4d0155e781d867d1dff417c1:
     env: {}
     env_from_config: []
@@ -46,6 +46,6 @@ helm_workload_a0fe97fd4d0155e781d867d1dff417c1:
     port: 80
     protocol: TCP
     replicas: 1
-    service_account: ""
+    service_account: petclinic
     volume_mounts: []
     volumes: []
